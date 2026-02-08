@@ -2,12 +2,18 @@ package com.Adarsh.simpleWebApp.model;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 //since this is a simple web project without database
 //so the data (details) regarding different products is written 
 //using this Product class
+
 @Component
+@Entity                // this annotation is for indicating to Hibernate that i want to create a table using this class.
 public class Product {
 	
+	@Id  // this makes the prodId as primary key
 	private int prodId;
 	private String prodName;
 	private int price;
